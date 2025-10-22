@@ -10,9 +10,14 @@
     # pkgs.python311Packages.pip
     # pkgs.nodejs_20
     # pkgs.nodePackages.nodemon
+    pkgs.docker
   ];
   # Sets environment variables in the workspace
   env = {};
+
+  # Enable the Docker daemon
+  services.docker.enable = true;
+
   idx = {
     # Search for the extensions you want on https://open-vsx.org/ and use "publisher.id"
     extensions = [
